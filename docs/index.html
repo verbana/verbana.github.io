@@ -1,10 +1,90 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>verbana.io</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Verbana</title>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            'sans': ['"Montserrat"', 'ui-sans-serif'],
+          }
+        }
+      }
+    </script>
   </head>
 
   <body>
-    <p>🌱</p>
+    <div id="container"
+         class="h-screen w-screen py-12 px-12
+          bg-neutral-900 text-neutral-300
+          flex-1 md:flex-none md:grid md:grid-cols-2">
+
+      <div id="about"
+           class="md:col-span-1
+           mb-6">
+        <p class="text-right md:text-left">
+          album in progress <span class="pl-2">🌱</span>
+        </p>
+      </div>
+
+      <div id="links"
+           class="font-bold text-xl uppercase
+           md:col-span-1
+           md:flex md:flex-col md:place-content-end">
+
+          <p class="text-right">
+            <a class="ease-in duration-200 hover:text-[#1DB954]"
+               href="https://open.spotify.com/artist/3wOCQJuZKO2Dr7B8R7t5Zl">
+              Spotify
+            </a>
+          </p>
+          <p class="text-right">
+            <a class="ease-in duration-200 hover:text-[#FA586A]"
+               href="https://music.apple.com/us/artist/verbana/1403045183">
+              Apple
+            </a>
+          </p>
+          <p class="text-right">
+            <a class="ease-in duration-200 hover:text-[#FF5500]"
+               href="https://soundcloud.com/verbana">
+              Soundcloud
+            </a>
+          </p>
+          <p class="text-right">
+            <a class="ease-in duration-200 hover:text-[#FF0000]"
+               href="https://www.youtube.com/user/VerbanaMusic">
+              YouTube
+            </a>
+          </p>
+          <p class="text-right">
+            <a class="ease-in duration-200 hover:text-[#FF0075]"
+               href="https://www.instagram.com/verbanamusic/">
+              Instagram
+            </a>
+          </p>
+          <p class="text-right">
+            <a class="ease-in duration-200 hover:text-[#1D9BF0]"
+               href="https://twitter.com/VerbanaMusic">
+              Twitter
+            </a>
+          </p>
+          <p class="text-right">
+            <a class="ease-in duration-200 hover:text-[#1877F2]"
+               href="https://www.facebook.com/verbanamusic">
+              Facebook
+            </a>
+          </p>
+      </div>
+
+    </div>
   </body>
+
 </html>
