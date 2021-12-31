@@ -25,20 +25,21 @@
     <div id="container"
          class="h-screen w-screen py-12 px-12
           bg-neutral-900 text-neutral-300
-          flex-1 md:flex-none md:grid md:grid-cols-2">
+          flex flex-col">
 
       <div id="about"
-           class="md:col-span-1
+           class="
+           grow
            mb-6">
-        <p class="text-right md:text-left">
+        <p class="text-left">
           album in progress <span class="pl-2">🌱</span>
         </p>
       </div>
 
       <div id="links"
            class="font-bold text-xl uppercase
-           md:col-span-1
-           md:flex md:flex-col md:place-content-end">
+           flex-none
+           ">
 
           <p class="text-right">
             <a class="ease-in duration-200 hover:text-[#1DB954]"
