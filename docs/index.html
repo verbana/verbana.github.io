@@ -21,7 +21,6 @@
     <meta property="og:image:type"      content="image/jpeg" />
     <meta property="og:image:width"     content="2090" />
     <meta property="og:image:height"    content="5224" />
-    <meta property="fb:app_id"          content="" />   <!-- TODO: ADD THIS -->
 
     <title>Verbana</title>
 
@@ -74,7 +73,7 @@
     <div id="container"
          class="h-screen w-screen py-12 px-12
           bg-neutral-900 text-neutral-300
-          flex flex-col">
+          flex flex-col select-none">
 
       <div id="about"
            class="
@@ -88,8 +87,18 @@
       <div id="links"
            class="font-bold text-xl uppercase
            flex-none
-           ">
+           flex flex-row place-items-end">
 
+        <div id="links-desktop" class="invisible flex-grow">
+          <p class="text-left bottom-0">
+            <a class="ease-in duration-200 hover:text-violet-500"
+               href="https://themes.verbana.io">
+              Ableton Live Theme Editor
+            </a>
+          </p>
+        </div>
+
+        <div id="links-all">
           <p class="text-right">
             <a class="ease-in duration-200 hover:text-[#1DB954]"
                href="https://open.spotify.com/artist/3wOCQJuZKO2Dr7B8R7t5Zl">
@@ -132,9 +141,15 @@
               Facebook
             </a>
           </p>
+        </div>
       </div>
 
     </div>
   </body>
 
+  <script>
+    if (!navigator.userAgent.includes("Mobi")) {
+      document.getElementById("links-desktop").classList.remove("invisible")
+    }
+  </script>
 </html>
